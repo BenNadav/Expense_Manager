@@ -1,0 +1,79 @@
+/*
+- Maxim Petrov 207467432
+- Ben Nadav 315114090
+- Gal Dahan 207232349
+ */
+
+.about-us-container h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 2rem;
+    border-bottom: 2px solid #1a837d;
+    border-radius: 5px;
+    font-family: Georgia, serif;
+    color: #1a837d;
+}
+
+.about-us-container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px auto;
+    background-color: whitesmoke;
+
+}
+
+.about-us-text {
+    margin-top: 15px;
+    line-height: 150%;
+    font-size: 18px;
+    font-family: Georgia, serif;
+}
+
+.about-us-container h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 20px;
+    border-bottom: 2px solid #1a837d;
+    border-radius: 5px;
+    font-family: Georgia, serif;
+    color: #1a837d;
+}
+
+.about-us-text {
+    text-align: center;
+
+}
+
+.team-members-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.team-member-card {
+    height: auto;
+    max-width: 20%;
+    padding: 3rem;
+    justify-items: center;
+    box-shadow: 0 5px 15px 5px #b9ffea inset;
+}
+
+.team-member-card h3,
+.team-member-card p {
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+.team-member-card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 120px;
+}

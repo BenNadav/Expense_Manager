@@ -1,0 +1,43 @@
+/*
+- Maxim Petrov 207467432
+- Ben Nadav 315114090
+- Gal Dahan 207232349
+ */
+.navbar {
+    padding-left: 20px;
+    align-items: center;
+    font-weight: bold;
+    display: flex;
+    border-bottom: 1px solid #f2f2f2;
+    background-color: #a5fdee;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 130px;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 0 8px 8px #b9ffea inset;
+}
+
+.links {
+    color: white;
+    background-color: #2eb0a6;
+    border-radius: 10px;
+    margin: 0 30px 50px 0;
+}
+
+.navbar .links {
+    float: left;
+    margin-left: auto;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Georgia, serif;
+}
+
+.navbar a:hover {
+    color:black;
+    background-color: #b2cccc;
+    transition: 0.3s;
+}

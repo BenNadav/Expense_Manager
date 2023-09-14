@@ -1,0 +1,76 @@
+/*
+- Maxim Petrov 207467432
+- Ben Nadav 315114090
+- Gal Dahan 207232349
+ */
+.reports {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-bottom: 50px;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: Georgia, serif;
+    color: #1a837d;
+}
+
+.select-container {
+    display: block;
+    column-gap: 1rem;
+    align-items: baseline;
+}
+
+.label {
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Georgia, serif;
+}
+.select{
+    font-size: 100%;
+    text-align: center;
+    padding: 0.3em;
+    outline: none;
+    background-color: white;
+    display: flex;
+}
+
+.submit{
+    padding: 1.5em 6em;
+    font-size: 12px;
+    font-family: Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 45px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+.submit:hover{
+    background-color: #2eb0a6;
+    box-shadow: 0 15px 20px rgb(26, 131, 125);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.total-expenses{
+    padding: 15px;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Georgia, serif;
+}
+.total-number{
+    color: #ff0000;
+    font-weight: 600;
+}
