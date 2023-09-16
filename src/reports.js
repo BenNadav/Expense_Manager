@@ -4,7 +4,7 @@
 - Gal Dahan 207232349
  */
 
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import './Reports.css';
 import idb from './idb';
 
@@ -30,7 +30,7 @@ const Reports = () => {
         return `${day}/${month}/${year}`;
     }
 
-    // Fetch the expenses from IndexedDB
+    // Fetch all the expenses from the database.
     useEffect(() => {
         idb.getAllCosts()
             .then(costs => {
@@ -41,7 +41,7 @@ const Reports = () => {
             });
     }, []);
 
-    // Calculate the total expenses for the filtered expenses
+    // Calculate the total expenses for the filtered expenses.
     const calculateTotalExpenses = () => {
         if (selectedYear && selectedMonth) {
             const filtered = expenses.filter(exp => {
@@ -54,17 +54,24 @@ const Reports = () => {
             setFilteredExpenses(filtered);
 
             let total = 0;
+            const newCategories = {};
+
             filtered.forEach(expense => {
                 total += parseInt(expense ? expense.price : 0);
-                // Update categories
-                if (categories[expense.category]) {
-                    categories[expense.category] += parseInt(expense.price);
+
+                if (newCategories[expense.category]) {
+                    newCategories[expense.category] += parseInt(expense.price);
                 } else {
-                    categories[expense.category] = parseInt(expense.price);
+                    newCategories[expense.category] = parseInt(expense.price);
                 }
             });
+
+            /*
+            It is important to make sure that we reset or initialize the categories object properly when generating
+            a new report (solution to the reports problem).
+             */
             setTotalExpenses(total);
-            setCategories({ ...categories }); // Update categories state
+            setCategories(newCategories);
         } else {
             alert('Please select a year and a month');
         }
@@ -130,7 +137,8 @@ const Reports = () => {
                 </table>
             )}
             <div>
-                <p className="total-expenses">Below is a breakdown of your expenses: <span className="total-number">{totalExpenses} ILS</span></p>
+                <p className="total-expenses">Below is a breakdown of your expenses: <span
+                    className="total-number">{totalExpenses} ILS</span></p>
             </div>
             <div>
                 <p className="total-expenses">Expenses by category:</p>

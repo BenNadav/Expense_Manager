@@ -4,6 +4,11 @@
 - Gal Dahan 207232349
  */
 
+/*
+THIS FILE WAS CREATED FOR THE PURPOSE OF TESTING THE PROJECT ACCORDING TO THE CODE THAT WILL BE PROVIDED BY THE
+LECTURER.
+ */
+
 class IndexedDBManager {
     constructor(dbName, dbVersion) {
         this.dbName = dbName;

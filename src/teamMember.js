@@ -3,6 +3,7 @@
 - Ben Nadav 315114090
 - Gal Dahan 207232349
  */
+
 import React from 'react';
 function TeamMember({ name, role, picture }) {
     return (

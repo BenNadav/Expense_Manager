@@ -136,7 +136,6 @@ class IndexedDBManager {
     }
 }
 
-// const idb = new IndexedDBManager("costsdb", 1);
 const idb = new IndexedDBManager();
 
 export default idb;

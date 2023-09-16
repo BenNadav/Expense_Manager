@@ -13,7 +13,7 @@ const Home = () => {
         document.title = "Cost Manager";
     }, []);
 
-    // These state variables are used to store the values of the inputs
+    // These state variables are used to store the values of the inputs.
     const [date, setDate] = useState('');
     const [item, setItem] = useState('');
     const [price, setPrice] = useState('');
@@ -35,7 +35,7 @@ const Home = () => {
         return `${day}/${month}/${year}`;
     }
 
-    // Fetch the expenses from IndexedDB
+    // Fetch all the expenses from the database.
     useEffect(() => {
         idb.getAllCosts()
             .then(costs => {

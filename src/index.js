@@ -3,6 +3,7 @@
 - Ben Nadav 315114090
 - Gal Dahan 207232349
  */
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -15,6 +16,5 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
 
 reportWebVitals();
