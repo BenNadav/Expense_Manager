@@ -3,6 +3,7 @@
 - Ben Nadav 315114090
 - Gal Dahan 207232349
  */
+
 import React, {useEffect} from 'react';
 import './About.css'
 import TeamMember from './teamMember';
@@ -10,8 +11,7 @@ import Maxim from './Maxim.png'
 import Ben from './Ben.png'
 import Gal from './Gal.png'
 
-//array of 3 group members
-
+// Array of 3 group members.
 const teamMembers = [
     {
         name: 'Maxim Petrov',
@@ -31,12 +31,10 @@ const teamMembers = [
 ];
 
 /*
-About us function tell us about the project and team members.
-about us contain map function that iterates over the team members array and for each team member it creates a new "team Member" component
-note : we have team member as objects and team Member component.
+The "About Us" function provides information about the project and the team members. Within the "About Us" section, there is a mapping function that iterates through the
+array of the team members created above. For each team member in the array, it generates a new "Team Member" component. Please note that we represent team members as
+objects, and there is a corresponding "Team Member" component for rendering them.
 */
-
-
 function AboutUs() {
     useEffect(() => {
         document.title = 'About Us';
